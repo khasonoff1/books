@@ -9,6 +9,8 @@
     outline: none;
 }
 :root {
+    --header-bg: #ffffff;
+    --body-bg: #f8fafd;
     --ff-header: "Dancing Script", cursive;
     --ff-body: "Rubik", sans-serif;
 }
@@ -25,7 +27,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--header-bg);
     z-index: 100;
 }
 .header-box {
@@ -37,7 +39,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--header-bg);
     z-index: 100;
 }
 .form {
@@ -49,7 +51,7 @@
     padding: 15px;
     border-radius: 30px;
     border: 1px solid #e3e6eb;
-    background: #f8fafd;
+    background-color: var(--body-bg);
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1);
 }
 .input {
@@ -70,7 +72,7 @@
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    background: #0d75ff;
+    background-color: #0d75ff;
     color: #fff;
     font-size: 16px;
     font-weight: 400;
@@ -89,7 +91,7 @@
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    background: #a6b0c3;
+    background-color: #a6b0c3;
     color: #fff;
     font-family: var(--ff-body);
     font-size: 14px;
@@ -111,7 +113,7 @@
     align-items: center;
     padding: 25px;
     border: 1px solid #e3e6eb;
-    background: #fff;
+    background-color: var(--header-bg);
     box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.1);
 }
 .nav-top {
@@ -137,7 +139,7 @@
     gap: 10px;
     padding: 15px 20px;
     border-radius: 4px;
-    background: #f8fafd;
+    background-color: var(--body-bg);
 }
 .nav-card-title {
     color: #000;
@@ -163,10 +165,10 @@
     padding: 20px;
     border-radius: 5px;
     border: 1px solid #e3e6eb;
-    background: #fff;
+    background-color: var(--header-bg);
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
 }
-.card-img{
+.card-img {
     width: 100%;
 }
 .card-body {
@@ -200,7 +202,7 @@
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
-    background: #ffd80d;
+    background-color: #ffd80d;
     color: #000;
     font-family: var(--ff-body);
     font-size: 14px;
@@ -212,7 +214,7 @@
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
-    background: #ffd80d;
+    background-color: #ffd80d;
     color: #000;
     font-family: var(--ff-body);
     font-size: 14px;
@@ -224,7 +226,7 @@
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
-    background: rgba(13, 117, 255, 0.05);
+    background-color: rgba(13, 117, 255, 0.05);
     color: #0d75ff;
     font-family: var(--ff-body);
     font-size: 12px;
@@ -243,5 +245,14 @@
     text-align: center;
     border: none;
     border-radius: 4px;
-    background: #75828a;
+    background-color: #75828a;
+}
+.modal-data {
+    border-radius: 30px;
+    background: rgba(13, 117, 255, 0.09);
+    color: #0d75ff;
+    font-family: var(--ff-body);
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px 10px;
 }

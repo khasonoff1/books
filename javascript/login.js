@@ -1,7 +1,10 @@
-let elForm = document.querySelector(".form");
-let elEmail = document.querySelector("#email-input");
-let elPassword = document.querySelector("#password-input");
-elForm.addEventListener("submit", function (evt) {
+function findElement(element, parent = document) {
+    return parent.querySelector(element);
+}
+const elForm = findElement(".form");
+const elEmail = findElement("#email-input");
+const elPassword = findElement("#password-input");
+elForm.addEventListener("submit", (evt) => {
     evt.preventDefault();
     fetch("https://reqres.in/api/login", {
         method: "POST",
@@ -14,13 +17,12 @@ elForm.addEventListener("submit", function (evt) {
         }),
     })
         .then((res) => res.json())
-        .then((data) => {
-            console.log(data);
-            if (data?.token) {
+        .then((res) => {
+            if (res?.token) {
                 window.location.replace("../index.html");
-                localStorage.setItem("token", data.token);
+                localStorage.setItem("token", res.token);
             } else {
-                alert("Login yoki parol xato");
+                alert("Error");
             }
         });
 });
